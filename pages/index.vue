@@ -83,7 +83,7 @@ export default {
       }
     },
     getData() {
-      return this.$axios.get("/search/Boris?").then(res => {
+      return this.$axios.get("/search/Boris").then(res => {
         this.allUsers = res.data;
       });
     }
