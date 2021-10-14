@@ -83,9 +83,16 @@ export default {
       }
     },
     getData() {
-      return this.$axios.get("/search/Boris").then(res => {
-        this.allUsers = res.data;
-      });
+      //  this.$axios.get("/search/Boris").then(res => {
+      //   this.allUsers = res.data;
+      // });
+
+      fetch("/search/Boris")
+        .then(response => response.json())
+        .then(json => {
+          console.log(json);
+          this.allUsers = json;
+        });
     }
   },
 
