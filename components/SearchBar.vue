@@ -16,7 +16,7 @@
       type="text"
       @input="$emit('input', $event.target.value)"
       :value="value"
-      placeholder="update 6"
+      placeholder="Search with Name, Title, Email, Address  "
       class="pl-8 text-xs h-9 input"
     />
   </div>
