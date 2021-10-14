@@ -64,7 +64,7 @@ export default {
       allUsers: []
     };
   },
-  fetch() {
+  mounted() {
     this.getData();
   },
   methods: {
