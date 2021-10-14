@@ -16,7 +16,7 @@
       type="text"
       @input="$emit('input', $event.target.value)"
       :value="value"
-      placeholder="update 4"
+      placeholder="update 5"
       class="pl-8 text-xs h-9 input"
     />
   </div>
