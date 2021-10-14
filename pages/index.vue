@@ -99,7 +99,7 @@ export default {
       const userArr = Object.freeze([...this.allUsers]);
 
       return userArr.filter(el => {
-        return el.name.toLowerCase().includes(this.search);
+        return el.name.toLowerCase().includes(this.search.toLowerCase());
       });
     }
   }
