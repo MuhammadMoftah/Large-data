@@ -1,7 +1,7 @@
 <template>
   <!-- // vue-virtualized-list -->
   <main class="flex items-center w-full min-h-screen bg-gray-100">
-    <section class="w-full max-w-3xl p-5 mx-auto bg-white rounded-md ">
+    <section class="w-full max-w-3xl p-5 mx-auto bg-white rounded-md h-[95vh] ">
       <!-- search section -->
       <div class="py-2">
         <SearchBar v-model.lazy="search" />
@@ -31,7 +31,7 @@
       <!-- users section -->
       <RecycleScroller
         v-else
-        class="max-h-[85vh] py-1 pr-2"
+        class="h-[85vh] py-1 pr-2 overflow-hidden"
         :items="usersToShow"
         :item-size="170"
         key-field="email"
