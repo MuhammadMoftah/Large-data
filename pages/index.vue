@@ -50,12 +50,16 @@
     </section>
   </main>
 </template>
-
 <script>
 import { RecycleScroller } from "vue-virtual-scroller";
 import "vue-virtual-scroller/dist/vue-virtual-scroller.css";
 
 export default {
+  // lazy typing
+  // timeout & clear timeout
+  // async compoennet useage
+  // funcinal component
+
   name: "HomePage",
   components: { RecycleScroller },
   data() {
@@ -69,17 +73,11 @@ export default {
   },
   methods: {
     switchSelect(user) {
-      const index = this.allUsers.indexOf(user);
-      const newUser = { ...user };
-
       // Select
       if (user.selected) {
-        newUser.selected = false;
-        this.allUsers.splice(index, 1, newUser);
+        this.$set(user, "selected", false);
       } else {
-        // Deselect
-        newUser.selected = true;
-        this.allUsers.splice(index, 1, newUser);
+        this.$set(user, "selected", true);
       }
     },
     getData() {
@@ -102,7 +100,10 @@ export default {
       const userArr = Object.freeze([...this.allUsers]);
 
       return userArr.filter(el => {
-        return el.name.toLowerCase().includes(this.search.toLowerCase());
+        return (
+          el.name.toLowerCase().includes(this.search.toLowerCase()) ||
+          el.email.toLowerCase().includes(this.search.toLowerCase())
+        );
       });
     }
   }

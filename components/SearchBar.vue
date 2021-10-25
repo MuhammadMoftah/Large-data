@@ -14,7 +14,7 @@
     </svg>
     <input
       type="text"
-      @input="$emit('input', $event.target.value)"
+      @input="updating($event.target.value)"
       :value="value"
       placeholder="Search with Name, Title, Email, Address  "
       class="pl-8 text-xs h-9 input"
@@ -25,6 +25,14 @@
 <script>
 export default {
   props: ["value"],
+  methods: {
+    updating(value) {
+      const x = setTimeout(() => {
+        this.$emit("input", value);
+      }, 1000);
+      console.log("timeout", x);
+    }
+  },
   name: "SearchBar"
 };
 </script>
