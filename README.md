@@ -10,6 +10,20 @@ Handling large data (20,000) one time without lagging with smooth scrolling and 
 https://moftah-bravado.netlify.app/
 ```
 
+## Plugin used
+
+```
+vue-virtual-scroller
+https://akryum.github.io/vue-virtual-scroller 
+```
+
+## Features
+
+```
+1- Filter while typing
+2- Highlight Search text in the result
+```
+
 ## Build Setup
 
 ```bash
